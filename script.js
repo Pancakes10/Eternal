@@ -20,6 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const signinPromptPopup = document.getElementById('signin-prompt-popup');
     const closeSigninPopup = signinPromptPopup.querySelector('.close-popup');
 
+
+    const burgerIcon = document.querySelector('.burger-icon');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    burgerIcon.addEventListener('click', () => {
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close the dropdown if clicked outside
+    window.addEventListener('click', (event) => {
+        if (!burgerIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.style.display = 'none';
+        }
+    });
+
     // Parse the user data from the URL if it exists
     const urlParams = new URLSearchParams(window.location.search);
     const userParam = urlParams.get('user');
@@ -86,23 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const planDetails = {
         welcome: {
             name: "Welcome Bot",
-            description: ["The Welcome bot is an amazing bot made for server Owners/Admins to welcome new joiners in a stylish way.\nThe bot can be set up easily with the built in slash commands.\nWhen a user Joins it will sends a Welcome message and it will also assign the role you wish to give members!"],
-            images: ["eternal.png" , "eternal.png"]
+            description: [`The Welcome bot is an amazing bot made for server Owners/Admins to welcome new joiners in a stylish way.\nThe bot can be set up easily with the built in slash commands. \n\nFeatures:\n•Welcome Message when User Joins\n•Automatically assigns role to new User\n•Easy setup with Commands System\n•Dedicated Support Server`],
+            images: ["Welcome_ShowCase_1.png"]//, "images/eternal.png"]
         },
         moderation: {
             name: "Moderation Bot",
             description: "The Freelancer plan provides more resources and tools for growing your business. Ideal for freelancers and consultants.",
             images: ["https://via.placeholder.com/400x300?text=Freelancer+Plan"]
         },
-        uknown: {
-            name: "unknown",
-            description: "unknown",
-            images: ["unknown"]
+        startup: {
+            name: "Startup",
+            description: "The Startup plan is designed for new businesses looking to scale. Includes advanced features and support.",
+            images: ["https://via.placeholder.com/400x300?text=Startup+Plan"]
         },
-        unknown: {
-            name: "unknown",
-            description: "unknown",
-            images: ["unknown"]
+        enterprise: {
+            name: "Enterprise",
+            description: "The Enterprise plan offers the most comprehensive features and support for large organizations.",
+            images: ["https://via.placeholder.com/400x300?text=Enterprise+Plan"]
         }
     };
 
