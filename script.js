@@ -86,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const planDetails = {
         welcome: {
             name: "Welcome Bot",
-            description: [
-"The Welcome bot is an amazing bot made for server Owners/Admins to welcome new joiners in a stylish way.\nThe bot can be set up easily with the built in slash commands.\nWhen a user Joins it will sends a Welcome message and it will also assign the role you wish to give members!"
-],
+            description: ["The Welcome bot is an amazing bot made for server Owners/Admins to welcome new joiners in a stylish way.\nThe bot can be set up easily with the built in slash commands.\nWhen a user Joins it will sends a Welcome message and it will also assign the role you wish to give members!"],
             images: ["eternal.png" , "eternal.png"]
         },
         moderation: {
