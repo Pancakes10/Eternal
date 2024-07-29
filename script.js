@@ -84,25 +84,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const planDetails = {
-        hobby: {
+        welcome: {
             name: "Welcome Bot",
-            description: "The Hobby plan offers all the basics for starting a new business. It's perfect for hobbyists and small projects.",
-            images: ["images/eternal.png"]//, "images/eternal.png"]
+            description: [
+"The Welcome bot is an amazing bot made for server Owners/Admins to welcome new joiners in a stylish way.\nThe bot can be set up easily with the built in slash commands.\nWhen a user Joins it will sends a Welcome message and it will also assign the role you wish to give members!"
+],
+            images: ["eternal.png" , "eternal.png"]
         },
-        freelancer: {
+        moderation: {
             name: "Moderation Bot",
             description: "The Freelancer plan provides more resources and tools for growing your business. Ideal for freelancers and consultants.",
             images: ["https://via.placeholder.com/400x300?text=Freelancer+Plan"]
         },
-        startup: {
-            name: "Startup",
-            description: "The Startup plan is designed for new businesses looking to scale. Includes advanced features and support.",
-            images: ["https://via.placeholder.com/400x300?text=Startup+Plan"]
+        uknown: {
+            name: "unknown",
+            description: "unknown",
+            images: ["unknown"]
         },
-        enterprise: {
-            name: "Enterprise",
-            description: "The Enterprise plan offers the most comprehensive features and support for large organizations.",
-            images: ["https://via.placeholder.com/400x300?text=Enterprise+Plan"]
+        unknown: {
+            name: "unknown",
+            description: "unknown",
+            images: ["unknown"]
         }
     };
 
