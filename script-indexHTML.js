@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const billingToggleButtons = document.querySelectorAll('.billing-toggle button');
     const plans = document.querySelectorAll('.plan');
-    const showcase = document.querySelector('.showcase');
     const planTitle = document.getElementById('plan-title');
     const planDescription = document.getElementById('plan-description');
     const showcaseImagesContainer = document.getElementById('showcase-images');
@@ -98,66 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    const planDetails = {
-        welcome: {
-            name: "Welcome Bot",
-            description: [`The Welcome bot is an amazing bot made for server Owners/Admins to welcome new joiners in a stylish way.\nThe bot can be set up easily with the built in slash commands. \n\nFeatures:\n•Welcome Message when User Joins\n•Automatically assigns role to new User\n•Easy setup with Commands System\n•Dedicated Support Server`],
-            images: ["Welcome_ShowCase_1.png"]//, "images/eternal.png"]
-        },
-        moderation: {
-            name: "Moderation Bot",
-            description: "The Freelancer plan provides more resources and tools for growing your business. Ideal for freelancers and consultants.",
-            images: ["https://via.placeholder.com/400x300?text=Freelancer+Plan"]
-        },
-        startup: {
-            name: "Startup",
-            description: "The Startup plan is designed for new businesses looking to scale. Includes advanced features and support.",
-            images: ["https://via.placeholder.com/400x300?text=Startup+Plan"]
-        },
-        enterprise: {
-            name: "Enterprise",
-            description: "The Enterprise plan offers the most comprehensive features and support for large organizations.",
-            images: ["https://via.placeholder.com/400x300?text=Enterprise+Plan"]
-        }
-    };
 
-    const updatePrices = (isYearly) => {
-        plans.forEach(plan => {
-            const priceElement = plan.querySelector('.price');
-            const monthlyPrice = parseInt(priceElement.getAttribute('data-monthly-price'));
-            if (isYearly) {
-                const yearlyPrice = Math.floor(monthlyPrice * 12 * 0.9); // 10% discount for yearly
-                priceElement.innerHTML = `$${yearlyPrice}<span>/year</span>`;
-            } else {
-                priceElement.innerHTML = `$${monthlyPrice}<span>/month</span>`;
-            }
-        });
-    };
-
-    const displayPlanDetails = (planType) => {
-        const details = planDetails[planType];
-        planTitle.textContent = `Plan Details - ${details.name}`;
-        planDescription.textContent = details.description;
-
-        showcaseImagesContainer.innerHTML = '';
-        details.images.forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = details.name;
-            showcaseImagesContainer.appendChild(img);
-        });
-
-        showcase.style.display = 'flex';
-    };
-
-    billingToggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            billingToggleButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            const isYearly = button.id === 'yearly-billing';
-            updatePrices(isYearly);
-        });
-    });
 
     plans.forEach(plan => {
         plan.addEventListener('click', () => {
