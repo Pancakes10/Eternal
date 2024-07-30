@@ -22,45 +22,71 @@
                     <a href="https://1e4b5f15-8a81-4ba4-9de8-4bde54e575cf-00-20nh4m3lsw1gm.picard.replit.dev/auth/discord">Sign In</a>
                 </li>
             </ul>
+
+            <!--
+            <a href="index.html">Home</a>             --    
+            <a href="pricing.html">Pricing</a>
+            <a href="features.html">Features</a>       X
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            -->
+
+
             <div class="burger-menu">
                 <div class="burger-icon">&#9776;</div>
                 <div class="dropdown-menu">
                     <a href="index.html">Home Page</a>
-                    <a href="pricing.html">Page 1</a>
-                    <a href="page2.html">Page 2</a>
+                    <a href="pricing.html">Products</a>
+                    <a href="status.html">Product Status</a>
+                    <a href="about.html">About & Contact</a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <h1>Discord Bot Prices</h1>
-        <p>Yearly billing is 10% cheaper than purchasing 12 Months!</p>
+        <h1>Eternal Devlopment</h1>
+        <p></p>
         <p>Duration of Purchase can be changed at Checkout</p>
         <div class="billing-toggle">
             <button id="monthly-billing" class="active">1 Month Billing</button>
             <button id="yearly-billing">1 Year Billing</button>
         </div>
         <div class="pricing-plans">
-            <div class="plan" data-plan="welcome">
-                <h2>Welcome Bot</h2>
-                <p>Welcome new user to your Discord in Style!</p>
-                <p class="price" data-monthly-price="4">$4<span>/month</span></p>
+            <div class="plan">
+                <h2>Fast Response Time</h2>
+                <p>Bots are hosted of low-latency servers optimized for rapid response times.</p>
+                <img src="/fast_innternet.png" alt="Internet" width="50" height="50">
                 <button>Subscribe</button>
             </div>
-            <div class="plan" data-plan="moderation">
+            <div class="plan">
                 <h2>Moderation Bot</h2>
                 <p>All the basics for starting a new business!</p>
                 <p class="price" data-monthly-price="3">$3<span>/month</span></p>
                 <button>Subscribe</button>
             </div>
-        </div>
-        <div class="showcase">
-            <div class="showcase-info">
-                <h2 id="plan-title">Plan Details</h2>
-                <p style="white-space: pre-line" id="plan-description"></p>
+            <div class="plan">
+                <h2>Welcome Bot</h2>
+                <p>Welcome new user to your Discord in Style!</p>
+                <p class="price" data-monthly-price="4">$4<span>/month</span></p>
+                <button>Subscribe</button>
             </div>
-            <div class="showcase-images" id="showcase-images">
-                <!-- Images will be dynamically inserted here -->
+            <div class="plan">
+                <h2>Moderation Bot</h2>
+                <p>All the basics for starting a new business!</p>
+                <p class="price" data-monthly-price="3">$3<span>/month</span></p>
+                <button>Subscribe</button>
+            </div>
+            <div class="plan">
+                <h2>Welcome Bot</h2>
+                <p>Welcome new user to your Discord in Style!</p>
+                <p class="price" data-monthly-price="4">$4<span>/month</span></p>
+                <button>Subscribe</button>
+            </div>
+            <div class="plan">
+                <h2>Moderation Bot</h2>
+                <p>All the basics for starting a new business!</p>
+                <p class="price" data-monthly-price="3">$3<span>/month</span></p>
+                <button>Subscribe</button>
             </div>
         </div>
     </main>
@@ -75,25 +101,15 @@
         </div>
     </div>
 
-    <!-- Sign-in Prompt Popup -->
-    <div id="signin-prompt-popup" class="profile-popup">
-        <div class="profile-popup-content">
-            <span class="close-popup">&times;</span>
-            <h2>Please Sign In</h2>
-            <p>You need to sign in to Subscribe.</p>
-            <a href="https://1e4b5f15-8a81-4ba4-9de8-4bde54e575cf-00-20nh4m3lsw1gm.picard.replit.dev/auth/discord"
-                class="button">Sign In</a>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Eternal Discord Bots. All rights reserved.</p>
         </div>
+        
     </footer>
-
-    <script src="script.js"></script>
+    
+    <script src="js/script.js"></script>
 </body>
 
 </html>
